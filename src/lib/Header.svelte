@@ -25,7 +25,7 @@
           Make designs specially illustrations, logos, UI/UX, apps & websites, social media,
           magazines & banners.
         </p>
-        <a href=""><button class="header__button">CONTACT US</button></a>
+        <a href=""><button class="button">CONTACT US</button></a>
       </div>
       <div class="header__content__icons">
         <a href="https://uk-ua.facebook.com/" target="_blank">

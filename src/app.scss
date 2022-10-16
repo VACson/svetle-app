@@ -6,30 +6,32 @@
 @import './styles/news.scss';
 @import './styles/button.scss';
 @import './styles/fonts';
-body {
+.font-inter {
   font-family: 'Inter', sans-serif;
-  font-style: normal;
+  color: #111;
 }
-h1,
-h2 {
+.heading-1,
+.heading-2 {
   font-weight: 800;
   letter-spacing: -4%;
+  line-height: 106%;
 }
 
-h1 {
+.heading-1 {
   font-size: 108px;
   line-height: 108px;
 }
-h2 {
+.heading-2 {
   font-size: 68px;
   line-height: 68px;
 }
-h3 {
+.heading-3 {
   font-size: 30px;
   line-height: 30px;
   font-weight: bold;
 }
-p {
+
+.paragraph {
   font-size: 18px;
   font-family: 'Work Sans', serif;
   line-height: 178%;

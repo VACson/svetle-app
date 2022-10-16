@@ -4,9 +4,10 @@
   import Design from '../assets/services/Design.svg';
   let services = [
     {
-      img: Ui,
-      name: 'UI/UX Design',
-      p: 'Perferendis doloribus asperiores repellat quia voluptas aspernatur te natus accusan maiores        alias consequatur aut aut.',
+      Icon: Ui,
+      title: 'UI/UX Design',
+      content:
+        'Perferendis doloribus asperiores repellat quia voluptas aspernatur te natus accusan maiores        alias consequatur aut aut.',
     },
     {
       img: Branding,
@@ -20,6 +21,7 @@
     },
   ];
 </script>
+
 <section class="services__section">
   <div class="services__title">
     <h2>Our Services</h2>
@@ -29,11 +31,11 @@
   </div>
   <div class="services__container">
     {#each services as service}
-    <div class="services__container__item">
-      <img class="services__icon" src="{service.img}" alt="" />
-      <h3>{service.name}</h3>
-      <p>{service.p}</p>
-    </div>
+      <div class="services__container__item">
+        <img class="services__icon" src={service.img} alt="" />
+        <h3>{service.name}</h3>
+        <p>{service.p}</p>
+      </div>
     {/each}
   </div>
 </section>

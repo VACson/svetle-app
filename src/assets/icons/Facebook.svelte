@@ -1,27 +1,9 @@
 <script>
-  export let fill = '#111';
-  let color = fill;
-  export let hover = '#4BA1A7';
-  function handleMouseOver(e) {
-    color = hover;
-  }
-  function handleMouseOut(e) {
-    color = fill;
-  }
 </script>
-<svg
-  on:mouseover="{handleMouseOver}"
-  on:mouseout="{handleMouseOut}"
-  on:focus="{handleMouseOver}"
-  on:blur="{handleMouseOut}"
-  width="20"
-  height="20"
-  viewBox="0 0 13 23"
-  fill="#9FAAAB"
-  xmlns="http://www.w3.org/2000/svg"
->
+
+<svg width="20" height="20" viewBox="0 0 13 23" fill="#9FAAAB" xmlns="http://www.w3.org/2000/svg">
   <path
     d="M9.64388 0.125C6.441 0.125 4.5625 1.81663 4.5625 5.67113V9.0625H0.5V13.125H4.5625V22.875H8.625V13.125H11.875L12.6875 9.0625H8.625V6.3585C8.625 4.90656 9.09869 4.1875 10.4613 4.1875H12.6875V0.291562C12.3024 0.239562 11.1803 0.125 9.64388 0.125Z"
-    fill="{color}"
+    fill="currentColor"
   />
 </svg>

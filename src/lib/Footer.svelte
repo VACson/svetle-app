@@ -1,22 +1,30 @@
 <script>
-  import Facebook from '../assets/icons/Facebook.svelte';
-  import Twitter from '../assets/icons/Twitter.svelte';
-  import Linkedin from '../assets/icons/Linkedin.svelte';
-  import Ball from '../assets/icons/Ball.svelte';
-  import Youtube from '../assets/icons/Youtube.svelte';
-  const links = ['home', 'about', 'services', 'portfolio', 'blogs', 'contact'];
-  let iconColor = '#9FAAAB';
-  var value = '';
-  let placeholder = 'Write Your Email Address';
+  import FacebookIcon from '../assets/icons/Facebook.svelte';
+  import TwitterIcon from '../assets/icons/Twitter.svelte';
+  import LinkedinIcon from '../assets/icons/Linkedin.svelte';
+  import BallIcon from '../assets/icons/Ball.svelte';
+  import YoutubeIcon from '../assets/icons/Youtube.svelte';
+  import { links } from './links.js';
+
+  const socials = [
+    { href: 'https://uk-ua.facebook.com/', Icon: FacebookIcon },
+    { href: 'https://twitter.com/home', Icon: TwitterIcon },
+    { href: 'https://www.linkedin.com/', Icon: LinkedinIcon },
+    { href: 'https://uk-ua.facebook.com/', Icon: BallIcon },
+    { href: 'https://www.youtube.com/', Icon: YoutubeIcon },
+  ];
+  const iconColor = '#9FAAAB';
+  let value = '';
+  const placeholder = 'Write Your Email Address';
+
   function handleSubmit(e) {
     const formData = new FormData(e.target);
     const data = {};
-    for (let field of formData) {
-      const [key, value] = field;
+    for (const [key, value] of formData) {
       data[key] = value;
     }
     value = '';
-    let message = 'Thank you for subscription ' + data.email;
+    const message = 'Thank you for subscription ' + data.email;
     console.log(data);
     alert(message);
   }
@@ -35,7 +43,7 @@
     </form>
     <div class="footer__details__links">
       {#each links as link}
-        <a class="footer__details__links__item" href="/">{link}</a>
+        <a class="footer__details__links__item" href={link.href}>{link.label}</a>
       {/each}
     </div>
     <div class="footer__details__sidetext">
@@ -49,11 +57,11 @@
   </div>
   <div class="footer__bottom">
     <div class="footer__bottom__social">
-      <a href="https://uk-ua.facebook.com/" target="_blank"> <Facebook fill={iconColor} /></a>
-      <a href="https://twitter.com/home" target="_blank"> <Twitter fill={iconColor} /></a>
-      <a href="https://www.linkedin.com/" target="_blank"> <Linkedin /></a>
-      <a href="/"> <Ball /></a>
-      <a href="https://www.youtube.com/" target="_blank"> <Youtube /></a>
+      {#each socials as social}
+        <a href="https://uk-ua.facebook.com/" target="_blank"
+          ><svelte:component this={social.Icon} /></a
+        >
+      {/each}
     </div>
     <span class="footer__bottom__author">©2022, Portfo by <u>TemplatesJungle.</u></span>
   </div>

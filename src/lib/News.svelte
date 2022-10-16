@@ -2,7 +2,13 @@
   import coffee from '../assets/gallery/coffee.png';
   import painting from '../assets/gallery/painting.png';
   import window from '../assets/gallery/window.png';
-  const gallery = [
+  const newsData = [
+    // {
+    //   image: coffee,
+    //   category: 'Design',
+    //   date: format(new Date('12/09/2022'), 'MMMM, dd, yyyy'),
+    //   heading: 'Graphic Designing Useful Tips & Best Practices',
+    // },
     {
       image: coffee,
       category: 'Design',
@@ -24,29 +30,38 @@
   ];
   const separators = [' / ', ','];
 </script>
+
 <section class="news">
-  <h2>Latest News</h2>
-  <p>Accusan maiores alias conseaut equatur aut perferendi.</p>
-  <div class="news__gallery">
-    {#each gallery as block}
-    <div class="news__gallery__info">
-      <img src="{block.image}" class="news__gallery__image" alt="" />
-      <span class="news__gallery__info__details"
-        ><span class="">{block.category}</span><span class="">{separators[0]}</span>
-        <span class="">{block.date.month}</span>
-        <span class="">{block.date.day}</span><span class="">{separators[1]}</span>
-        <span class="">{block.date.year}</span>
-      </span>
-      <h3 class="news__gallery__info__details news__gallery__info__details__heading">
-        {block.heading}
-      </h3>
-    </div>
+  <h2 class="heading-2 font-inter">Latest News</h2>
+  <p class="paragraph">Accusan maiores alias conseaut equatur aut perferendi.</p>
+  <div class="news__article">
+    {#each newsData as news}
+      <a href="#" class="news__article__info">
+        <img src={news.image} class="news__article__image" alt="" />
+        <div class="news__article__info__details font-work-sans">
+          <div class="news__article__info__details__date">
+            <span class="span">{news.category}</span><span class="span">{separators[0]}</span>
+            <span class="span">{news.date.month}</span>
+            <span class="span">{news.date.day}</span><span class="span">{separators[1]}</span>
+            <span class="span">{news.date.year}</span>
+          </div>
+          <h3 class="heading-3 font-inter news__article__info__details__heading">
+            {news.heading}
+          </h3>
+        </div>
+      </a>
     {/each}
   </div>
-  <button class="button">VIEW ALL BLOGS</button>
+  <button class="button button--blog">VIEW ALL BLOGS</button>
 </section>
+
 <style>
-  span {
+  .span {
+    font-family: inherit;
     color: inherit;
+    color: #303030;
+  }
+  .button--blog {
+    width: 284px;
   }
 </style>

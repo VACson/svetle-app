@@ -1,18 +1,22 @@
 .header {
   width: 100%;
-  height: 100vh;
+  height: 1000px;
   &__img {
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
   }
   &__section {
-    width: 88%;
-    margin: 60px auto;
+    width: 100%;
+    height: 772px;
+    padding: 60px 110px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
   }
   &__logo {
     position: relative;
@@ -33,12 +37,12 @@
     }
   }
   &__content {
-    width: 83.5%;
     height: 469px;
-    margin: auto;
+    padding: 0 140px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     &__section {
       width: 70%;
       display: flex;
@@ -49,7 +53,20 @@
       display: flex;
       flex-flow: column nowrap;
       height: 100%;
-      justify-content: space-evenly;
+      justify-content: center;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    width: 52px;
+    height: 50px;
+    padding: 25px 18px;
+    bottom: -13px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #111;
+    &:hover {
+      color: #4ba1a7;
     }
   }
 }
@@ -59,26 +76,72 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   &__burger {
+    color: #000;
+    position: relative;
     width: 47px;
+    height: 33px;
+    transition: 0.3s;
+    &:hover {
+      color: #4ba1a7;
+      transition: 0.3s;
+    }
+    &--active {
+      transform: rotate(180deg);
+    }
+  }
+  &__menu {
+    background: #fff;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 70px;
+    right: 90px;
+    top: 70px;
+    width: 20%;
+    height: 80%;
+    border-radius: 18px;
+    &__link {
+      height: 48px;
+      font-size: 48px;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: 0.3s;
+      &:hover {
+        color: #4ba1a7;
+        transition: 0.3s;
+      }
+    }
   }
 }
-.h1 {
-  font-size: 10.8vh;
+.heading-1 {
   font-weight: 800;
   line-height: 106%;
 }
 .caption {
+  width: 80%;
   font-family: 'Work Sans', serif;
   font-size: 24px;
   font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 45px;
 }
 .icon {
   width: 50px;
   height: 50px;
+  color: #000;
   background: #fff;
   border-radius: 50%;
-  padding: 12px;
-  outline: 1px solid #111;
-  // border: 15px solid #fff;
+  padding: 14px;
+  border: 1px solid #111;
+  margin: 7px 0;
+  transition: 0.3s;
+  &:hover {
+    transition: 0.3s;
+    color: #4ba1a7;
+    border: 1px solid #4ba1a7;
+  }
 }

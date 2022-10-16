@@ -1,6 +1,32 @@
+@import './styles/normalize.scss';
 @import './styles/header.scss';
+@import './styles/services.scss';
 @import './styles/fonts';
 body {
   font-family: 'Inter', sans-serif;
   font-style: normal;
+}
+h1,
+h2 {
+  font-weight: 800;
+  letter-spacing: -4%;
+}
+
+h1 {
+  font-size: 108px;
+  line-height: 108px;
+}
+h2 {
+  font-size: 68px;
+  line-height: 68px;
+}
+h3 {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+p {
+  font-size: 18px;
+  font-family: 'Work Sans', serif;
+  line-height: 178%;
 }

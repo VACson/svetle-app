@@ -8,4 +8,13 @@
   font-size: 19px;
   font-weight: 600;
   color: #111;
+  &__footer {
+    width: 100%;
+    height: 56px;
+    text-align: center;
+    background: #4ba1a7;
+    border: none;
+    color: #fdfdfd;
+    border-radius: 8px;
+  }
 }

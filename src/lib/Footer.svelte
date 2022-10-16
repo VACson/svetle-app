@@ -1,0 +1,76 @@
+<script>
+  import Facebook from '../assets/icons/Facebook.svelte';
+  import Twitter from '../assets/icons/Twitter.svelte';
+  import Linkedin from '../assets/icons/Linkedin.svelte';
+  import Ball from '../assets/icons/Ball.svelte';
+  import Youtube from '../assets/icons/Youtube.svelte';
+  const links = ['home', 'about', 'services', 'portfolio', 'blogs', 'contact'];
+  let iconColor = '#9FAAAB';
+  var value = '';
+  let placeholder = 'Write Your Email Address';
+  function handleSubmit(e) {
+    const formData = new FormData(e.target);
+    const data = {};
+    for (let field of formData) {
+      const [key, value] = field;
+      data[key] = value;
+    }
+    value = '';
+    let message = 'Thank you for subscription ' + data.email;
+    console.log(data);
+    alert(message);
+  }
+</script>
+
+<footer class="footer">
+  <div class="footer__details">
+    <div class="header__logo footer__logo">
+      <div class="header__logo__text">Portfo.</div>
+      <div class="header__logo__circle" />
+    </div>
+    <form class="footer__details__form" on:submit|preventDefault={handleSubmit} action="">
+      <p>Subscribe to newsletter to get some updates related with branding, designs and more.</p>
+      <input id="email" name="email" type="email" bind:value {placeholder} />
+      <button class="button button__footer" type="submit">SUBSCRIBE</button>
+    </form>
+    <div class="footer__details__links">
+      {#each links as link}
+        <a class="footer__details__links__item" href="/">{link}</a>
+      {/each}
+    </div>
+    <div class="footer__details__sidetext">
+      <p>
+        Just feel free to contact if you wanna collaborate with me, or simply have a conversation.
+      </p>
+      <a class="footer__details__sidetext__email" href="mailto:webmaster@somedomain.com"
+        >templatesjungle@gmail.com</a
+      >
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom__social">
+      <a href="https://uk-ua.facebook.com/" target="_blank"> <Facebook fill={iconColor} /></a>
+      <a href="https://twitter.com/home" target="_blank"> <Twitter fill={iconColor} /></a>
+      <a href="https://www.linkedin.com/" target="_blank"> <Linkedin /></a>
+      <a href="/"> <Ball /></a>
+      <a href="https://www.youtube.com/" target="_blank"> <Youtube /></a>
+    </div>
+    <span class="footer__bottom__author">©2022, Portfo by <u>TemplatesJungle.</u></span>
+  </div>
+</footer>
+
+<style>
+  input {
+    width: 100%;
+    height: 56px;
+    background: #f4f4f0;
+    border: 1px solid #111111;
+    border-radius: 8px;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #303030;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+</style>

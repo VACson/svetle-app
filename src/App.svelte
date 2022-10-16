@@ -5,6 +5,7 @@
   import Services from './lib/Services.svelte'
   import Clients from './lib/Clients.svelte'
   import News from './lib/News.svelte'
+  import Footer from './lib/Footer.svelte'
 </script>
 
 <main>
@@ -12,6 +13,7 @@
   <Services />
   <Clients />
   <News />
+  <Footer />
 </main>
 
 <style>

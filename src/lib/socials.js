@@ -13,7 +13,7 @@ export const socials = [
     Icon: InstagramIcon,
   },
   {
-    href: '#',
+    href: '/',
     Icon: BeIcon,
   },
   {

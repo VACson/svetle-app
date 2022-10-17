@@ -1,26 +1,26 @@
 export const links = [
   {
     label: 'home',
-    href: '#',
+    href: '/',
   },
   {
     label: 'about',
-    href: '#',
+    href: '/',
   },
   {
     label: 'services',
-    href: '#',
+    href: '/',
   },
   {
     label: 'portfolio',
-    href: '#',
+    href: '/',
   },
   {
     label: 'blogs',
-    href: '#',
+    href: '/',
   },
   {
     label: 'contact',
-    href: '#',
+    href: '/',
   },
 ];

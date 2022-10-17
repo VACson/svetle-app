@@ -65,7 +65,10 @@
     left: 50%;
     transform: translate(-50%);
     color: #111;
-    &:hover {
+    &:hover,
+    :focus,
+    :focus-within,
+    :focus-visible {
       color: #4ba1a7;
     }
   }
@@ -83,7 +86,10 @@
     width: 47px;
     height: 33px;
     transition: 0.3s;
-    &:hover {
+    &:hover,
+    :focus,
+    :focus-within,
+    :focus-visible {
       color: #4ba1a7;
       transition: 0.3s;
     }
@@ -110,7 +116,10 @@
       text-transform: uppercase;
       font-weight: 400;
       transition: 0.3s;
-      &:hover {
+      &:hover,
+      :focus,
+      :focus-within,
+      :focus-visible {
         color: #4ba1a7;
         transition: 0.3s;
       }
@@ -139,7 +148,10 @@
   border: 1px solid #111;
   margin: 7px 0;
   transition: 0.3s;
-  &:hover {
+  &:hover,
+  :focus,
+  :focus-within,
+  :focus-visible {
     transition: 0.3s;
     color: #4ba1a7;
     border: 1px solid #4ba1a7;

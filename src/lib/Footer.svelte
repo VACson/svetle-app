@@ -12,8 +12,7 @@
     }
     value = '';
     const message = 'Thank you for subscription ' + data.email;
-    console.log(data);
-    alert(message);
+    data.email !== '' && alert(message);
   }
 </script>
 
@@ -35,11 +34,11 @@
         bind:value
         placeholder="Write Your Email Address"
       />
-      <button class="button button__footer" type="submit">SUBSCRIBE</button>
+      <button class="button button__footer" type="submit" tabindex="0">SUBSCRIBE</button>
     </form>
     <div class="footer__details__links">
-      {#each links as link}
-        <a class="footer__details__links__item" href={link.href}>{link.label}</a>
+      {#each links as link, i}
+        <a class="footer__details__links__item" href={link.href} tabindex={i}>{link.label}</a>
       {/each}
     </div>
     <div class="footer__details__sidetext">
@@ -53,8 +52,8 @@
   </div>
   <div class="footer__bottom">
     <div class="footer__bottom__social">
-      {#each socials as social}
-        <a class="footer__bottom__social__icon" href={social.href} target="_blank"
+      {#each socials as social, i}
+        <a class="footer__bottom__social__icon" href={social.href} target="_blank" tabindex={i}
           ><svelte:component this={social.Icon} /></a
         >
       {/each}

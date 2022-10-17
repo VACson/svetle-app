@@ -16,7 +16,10 @@
       color: #9faaab;
       height: 50px;
       transition: 0.5s;
-      &:hover {
+      &:hover,
+      :focus,
+      :focus-within,
+      :focus-visible {
         transition: 0.5s;
         color: #111;
       }

@@ -12,7 +12,9 @@
   background: #f4f4f0;
   transition: 0.3s;
   &:hover,
-  :focus {
+  :focus,
+  :focus-within,
+  :focus-visible {
     transition: 0.3s;
     color: #4ba1a7;
     border: 1px solid #4ba1a7;
@@ -26,7 +28,9 @@
     color: #fdfdfd;
     border-radius: 8px;
     &:hover,
-    :focus {
+    :focus,
+    :focus-within,
+    :focus-visible {
       background: #f4f4f0;
     }
   }

@@ -13,7 +13,13 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     &__img {
+      color: #9faaab;
       height: 50px;
+      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+        color: #111;
+      }
     }
   }
 }

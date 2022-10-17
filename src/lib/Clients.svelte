@@ -1,18 +1,20 @@
 <script>
-  import Vintage from '../assets/clients/Vintage.svg';
-  import Violet from '../assets/clients/Violet.svg';
-  import Ceathes from '../assets/clients/Ceathes.svg';
-  import CreaterFav from '../assets/clients/CreaterFav.svg';
-  import LavenderAgency from '../assets/clients/LavenderAgency.svg';
+  import Vintage from '../assets/clients/Vintage.svelte';
+  import Violet from '../assets/clients/Violet.svelte';
+  import Ceathes from '../assets/clients/Ceathes.svelte';
+  import CreaterFav from '../assets/clients/CreaterFav.svelte';
+  import LavenderAgency from '../assets/clients/LavenderAgency.svelte';
   const clientsIcons = [Vintage, Violet, Ceathes, CreaterFav, LavenderAgency];
 </script>
 
 <section class="clients">
-  <h2>Our Clients</h2>
-  <p>We have worked with great clients for which we are very proud.</p>
+  <h2 class="heading-2 font-inter">Our Clients</h2>
+  <p class="paragraph">We have worked with great clients for which we are very proud.</p>
   <div class="clients__jumbotron">
     {#each clientsIcons as clientIcon}
-      <img src={clientIcon} class="clients__jumbotron__img" alt="" />
+      <a href="/" class="clients__jumbotron__img">
+        <svelte:component this={clientIcon} />
+      </a>
     {/each}
   </div>
 </section>

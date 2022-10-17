@@ -1,21 +1,8 @@
 <script>
-  import FacebookIcon from '../assets/icons/Facebook.svelte';
-  import TwitterIcon from '../assets/icons/Twitter.svelte';
-  import LinkedinIcon from '../assets/icons/Linkedin.svelte';
-  import BallIcon from '../assets/icons/Ball.svelte';
-  import YoutubeIcon from '../assets/icons/Youtube.svelte';
   import { links } from './links.js';
+  import { socials } from './socialsInFooter.js';
 
-  const socials = [
-    { href: 'https://uk-ua.facebook.com/', Icon: FacebookIcon },
-    { href: 'https://twitter.com/home', Icon: TwitterIcon },
-    { href: 'https://www.linkedin.com/', Icon: LinkedinIcon },
-    { href: 'https://uk-ua.facebook.com/', Icon: BallIcon },
-    { href: 'https://www.youtube.com/', Icon: YoutubeIcon },
-  ];
-  const iconColor = '#9FAAAB';
   let value = '';
-  const placeholder = 'Write Your Email Address';
 
   function handleSubmit(e) {
     const formData = new FormData(e.target);
@@ -37,8 +24,17 @@
       <div class="header__logo__circle" />
     </div>
     <form class="footer__details__form" on:submit|preventDefault={handleSubmit} action="">
-      <p>Subscribe to newsletter to get some updates related with branding, designs and more.</p>
-      <input id="email" name="email" type="email" bind:value {placeholder} />
+      <p class="paragraph">
+        Subscribe to newsletter to get some updates related with branding, designs and more.
+      </p>
+      <input
+        class="input"
+        id="email"
+        name="email"
+        type="email"
+        bind:value
+        placeholder="Write Your Email Address"
+      />
       <button class="button button__footer" type="submit">SUBSCRIBE</button>
     </form>
     <div class="footer__details__links">
@@ -47,10 +43,10 @@
       {/each}
     </div>
     <div class="footer__details__sidetext">
-      <p>
+      <p class="paragraph">
         Just feel free to contact if you wanna collaborate with me, or simply have a conversation.
       </p>
-      <a class="footer__details__sidetext__email" href="mailto:webmaster@somedomain.com"
+      <a class="footer__details__sidetext__email" href="mailto:templatesjungle@gmail.com"
         >templatesjungle@gmail.com</a
       >
     </div>
@@ -58,7 +54,7 @@
   <div class="footer__bottom">
     <div class="footer__bottom__social">
       {#each socials as social}
-        <a href="https://uk-ua.facebook.com/" target="_blank"
+        <a class="footer__bottom__social__icon" href={social.href} target="_blank"
           ><svelte:component this={social.Icon} /></a
         >
       {/each}
@@ -68,7 +64,7 @@
 </footer>
 
 <style>
-  input {
+  .input {
     width: 100%;
     height: 56px;
     background: #f4f4f0;
@@ -80,5 +76,11 @@
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 15px;
+    transition: 0.3s;
+  }
+  .input:focus {
+    transition: 0.3s;
+    padding: 14px 22px;
+    border: 4px solid #4ba1a7;
   }
 </style>

@@ -22,9 +22,11 @@
       color: inherit;
     }
     &__links {
-      width: 300px;
+      width: 200px;
+      height: 156px;
       display: flex;
       flex-flow: column wrap;
+      align-items: space-between;
       color: inherit;
       &__item {
         width: 100%;
@@ -68,7 +70,12 @@
       justify-content: space-between;
       &__icon {
         height: 20px;
-        fill: red;
+        color: #9faaab;
+        transition: 0.3s;
+        &:hover {
+          color: #4ba1a7;
+          transition: 0.3s;
+        }
       }
     }
     &__author {

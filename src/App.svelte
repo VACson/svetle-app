@@ -9,8 +9,8 @@
 
 <main>
   <Header />
-  <!-- <Services /> -->
-  <!-- <Clients /> -->
+  <Services />
+  <Clients />
   <News />
   <Footer />
 </main>

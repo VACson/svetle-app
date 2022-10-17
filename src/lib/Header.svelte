@@ -39,7 +39,7 @@
     <div class="header__content">
       <div class="header__content__section">
         <h1 class="heading-1 font-inter">Chris Lee <br /> Creative Design</h1>
-        <p class="caption">
+        <p class="caption paragraph">
           Make designs specially illustrations, logos, UI/UX, apps & websites, social media,
           magazines & banners.
         </p>

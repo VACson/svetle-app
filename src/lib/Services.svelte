@@ -21,3 +21,21 @@
     {/each}
   </div>
 </section>
+
+<style>
+  @media (max-width: 1200px) {
+    .services__section {
+    height: fit-content;
+  }
+  .services__title {
+    width: 100%;
+  }
+  .services__container {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .services__container__item {
+    width: 100%;
+  }
+  }
+</style>

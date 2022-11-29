@@ -17,7 +17,7 @@
   &__container {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    gap: 50px;
     &__item {
       width: 28.5%;
       min-height: 300px;

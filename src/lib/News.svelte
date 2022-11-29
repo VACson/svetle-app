@@ -64,4 +64,16 @@
   .button--blog {
     width: 284px;
   }
+  @media (max-width:1200px) {
+    .news__article {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 20px;
+      height: fit-content;
+    }
+    .news__article__info {
+      width: 100%;
+      height: 500px;
+    }
+  }
 </style>

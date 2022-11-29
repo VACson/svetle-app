@@ -2,6 +2,7 @@
   width: 100%;
   padding: 13%;
   display: flex;
+  height: fit-content;
   flex-flow: column nowrap;
   align-items: center;
   &__article {

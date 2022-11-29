@@ -18,3 +18,20 @@
     {/each}
   </div>
 </section>
+
+<style>
+  @media (max-width: 1200px) {
+    .clients {
+      width: 100%;
+      height: fit-content;
+      padding: 50px;
+    }
+    .clients__jumbotron {
+      margin: 50px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
+</style>

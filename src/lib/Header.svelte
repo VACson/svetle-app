@@ -56,4 +56,34 @@
 </header>
 
 <style>
+  @media (max-width: 1200px) {
+    .header__section, .header__content {
+       padding: 10px;
+       justify-content: start;
+    }
+    .header__content__icons {
+      display: none;
+    }
+    
+    .header__content__section {
+      width: 100%;
+    }
+    .header__content__section a {
+      margin: 400px auto 0 auto;
+    }
+    .nav__menu {
+      top: 20px;
+      right: 10px;
+      width: 96%;
+      height: fit-content;
+    }
+    .nav__menu__link {
+      font-size: 24px;
+      height: 40px;
+    }
+    .heading-1 {
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
 </style>

@@ -82,4 +82,32 @@
     padding: 14px 22px;
     border: 4px solid #4ba1a7;
   }
+  @media screen and (max-width: 1200px) {
+    .footer__details__form {
+      width: 100%;
+    }
+    .footer__details__links {
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      gap: 20px;
+    }
+    .footer__details__links__item {
+      width: 40%;
+    }
+    .footer__details__sidetext {
+      width: 100%;
+      margin: 50px 0;
+    }
+    .footer__details__sidetext__email {
+     font-size: 24px;
+    }
+    .footer__bottom {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .footer__bottom__social {
+      margin: 20px 0;
+    }
+  }
 </style>
